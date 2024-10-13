@@ -1262,3 +1262,36 @@ h3 > a { color: inherit; }
   .footer-bottom .container { justify-content: space-between; }
 
 }
+
+.moving-band {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px; /* Height of the band */
+  width: 100%; /* Full width */
+  background-color: rgb(21, 20, 20); /* Solid fill color for the band */
+  position: relative; /* Position for the moving text */
+  overflow: hidden; /* Hide overflow */
+  color: rgb(140, 25, 25); /* Text color */
+  border: 3px rgb(8, 8, 8); /* Border around the band */
+}
+
+.moving-link {
+  position: absolute;
+  font-size: 24px;
+  text-decoration: none;
+  color: rgb(246, 245, 245); /* Black text */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  animation: move 15s linear infinite; /* Slower speed */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+@keyframes move {
+  0% {
+      left: 100%; /* Start off-screen to the right */
+  }
+  100% {
+      left: -200px; /* Move to the left off-screen */
+  }
+}
