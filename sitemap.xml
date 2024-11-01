@@ -19,11 +19,4 @@
      <priority>0.5</priority>
    </url>
    <!-- Add more pages as needed -->
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
-    <!-- Existing sitemap entries -->
-    
-    <sitemap>
-        <loc>https://yourwordpresssite.com/sitemap.xml</loc>
-    </sitemap>
-</sitemapindex>
 </urlset>
