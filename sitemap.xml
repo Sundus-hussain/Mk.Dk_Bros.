@@ -19,4 +19,7 @@
      <priority>0.5</priority>
    </url>
    <!-- Add more pages as needed -->
+    <sitemap>
+        <loc>https://mdbotshop.wordpress.com/sitemap.xml</loc>
+    </sitemap>
 </urlset>
