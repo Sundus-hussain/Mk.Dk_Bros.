@@ -28,3 +28,15 @@ async function fetchWordPressNews() {
 
 // Fetch news on page load
 fetchWordPressNews();
+
+//for adding adds
+document.addEventListener('deviceready', function() {
+    admob.banner.config({
+        id: 'ca-app-pub-5973082843313113/4128492828', // Replace with your AdMob Banner ID
+        isTesting: true, // Set to false for production
+        autoShow: true
+    });
+
+    admob.banner.prepare();
+});
+
