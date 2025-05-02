@@ -30,13 +30,19 @@ async function fetchWordPressNews() {
 fetchWordPressNews();
 
 //for adding adds
-document.addEventListener('deviceready', function() {
+document.addEventListener('deviceready', function () {
     admob.banner.config({
-        id: 'ca-app-pub-3940256099942544/6300978111', // Replace with your AdMob Banner ID
-        isTesting: true, // Set to false for production
-        autoShow: true
+        id: 'ca-app-pub-3940256099942544/6300978111', // Test Ad Unit ID
+        isTesting: true,
+        autoShow: false // Set to false and show manually
     });
 
-    admob.banner.prepare();
+    admob.banner.prepare()
+        .then(() => {
+            admob.banner.show(); // Explicitly show after preparation
+        })
+        .catch(err => {
+            console.error('AdMob banner failed:', err);
+        });
 });
 
